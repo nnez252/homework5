@@ -17,7 +17,7 @@ public class Main {
         System.out.println("Задание 3 ");
 
         var year = 2021;
-                if (year%4 > 0 || year%100 > 0 || year%400 > 0){
+                if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0){
                     System.out.println("Высокосный");
                 }else {
                     System.out.println(" Обычыный");
@@ -25,18 +25,16 @@ public class Main {
 // Задание 4
         System.out.println("Задание 4 ");
         var deliveryDistance = 105;
-        if ( deliveryDistance <= 20 ){
-            System.out.println("Доставка занимает сутки");
-        } else if (deliveryDistance>20 && deliveryDistance<60 ) {
-            System.out.println("Доставка занимает 2 сутки ");
-        } else if (deliveryDistance>60 && deliveryDistance<100) {
-            System.out.println("Доставка занимает 3 сутки");
-
-        }else {
-            System.out.println("Уточните у продовца ");
+        var deliverydays = 1;
+        if ( deliveryDistance > 20 ){
+            deliverydays++;
+            if (deliveryDistance>60)
+                deliverydays++;
         }
+
+        System.out.println("Потербуется дней " +deliverydays);
 // Задание 5
-        System.out.println("Задание 4 ");
+        System.out.println("Задание 5 ");
         var monthNumber = 12;
         switch (monthNumber){
             case 1:
